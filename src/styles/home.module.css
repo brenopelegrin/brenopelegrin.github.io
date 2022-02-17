@@ -8,16 +8,14 @@
 }
 
 .header img {
+  width: 350px;
+  height: 350px;
+  display: inline-block;
+  border-radius: 50%;
   float: left;
-  max-width: 190px;
   margin-right: 35px;
   border: 4px solid rgb(87, 61, 206);;
-  border-radius: 50%;
   max-width: 100%;
-  width: 350px; /* width of container */
-  height: 350px; /* height of container */
-  object-fit: cover;
-  object-position: 20% 10%; /* try 20px 10px */ 
   display: grid;
   align-self: right;
 }
