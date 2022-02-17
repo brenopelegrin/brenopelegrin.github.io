@@ -33,26 +33,61 @@ p {
   max-width: 1200px;
   margin: 0 auto;
 }
-nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 40px auto;
-  text-decoration: none;
+
+.content{
+  padding: 0 5%;
 }
 
-nav .links {
-  display: inline-block;
+.fa {
+  margin-right: 5px;
+}
+
+nav {
+  vertical-align: top;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 85px;
+  margin-bottom: 2%;
+  padding: 0 5%;
+}
+
+nav .links ul {
+  list-style: none;
   text-align: right;
 }
-nav a {
+nav .menu {
+  align-self: right;
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  nav .links ul {
+    display: none;
+  }
+  nav .menu {
+    display: grid;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    margin-top: 8px;
+  }
+}
+
+nav .links ul li{
   vertical-align: bottom;
-  line-height: 10px;
+  line-height: normal;
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 4%;
+  text-align: center;
+}
+
+nav a {
   font-weight: 400;
   padding-bottom: 8px;
   border-bottom: 3px solid transparent;
 }
+
 nav a:hover {
   border-color: rgb(87, 61, 206);
 }
@@ -60,10 +95,11 @@ nav a:hover {
 nav h3 {
   vertical-align: bottom;
   line-height: 10px;
+  text-align: left;
   font-family: 'Roboto Mono', monospace;
 }
 
-footer {
+footer {  
     position: fixed;
     left: 0;
     bottom: 0;

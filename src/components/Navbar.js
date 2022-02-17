@@ -4,12 +4,20 @@ import React from 'react'
 export default function Navbar() {
   return (
     <nav>
+        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"/>
         <h3>&lt;brenopelegrin/&gt;</h3>
         <div className="links">
-            <Link to="/">Início </Link>
-            <Link to="/about">Currículo </Link>
-            <Link to="/projects">Projetos </Link>
-            <Link to="/blog">Blog </Link>
+          <ul>
+            <li><Link to="/">Início</Link></li>
+            <li><Link to="/about">Currículo</Link></li>
+            <li><Link to="/projects">Projetos</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="#"><i class="fa fa-globe fa-fw"></i> pt-BR</Link></li>
+            <li><Link to="#"><i class="fa fa-moon"></i> Dark </Link></li>
+          </ul>
+          <div className="menu">
+            <i class="fa fa-bars"></i>
+          </div>
         </div>
     </nav>
   )

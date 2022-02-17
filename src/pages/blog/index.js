@@ -5,7 +5,7 @@ export default function blogIndex() {
   return (
       <Layout>
           <div>
-              <h1>This is the blog index page.</h1>
+              <h1>Ainda não há nada aqui :(</h1>
           </div>
       </Layout>
   )
