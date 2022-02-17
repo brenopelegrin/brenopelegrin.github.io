@@ -72,4 +72,18 @@ footer {
     text-align: center;
 }
 
+span.pink {
+  color: #9575cd;
+  background: none;
+}
+
+span.blue {
+  color: #4fc3f7;
+  background: none;
+}
+
+span.highlight { 
+  color: rgb(87, 61, 206);
+  background: none;
+}
 

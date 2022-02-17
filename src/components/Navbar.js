@@ -7,7 +7,7 @@ export default function Navbar() {
         <h3>&lt;brenopelegrin/&gt;</h3>
         <div className="links">
             <Link to="/">Início </Link>
-            <Link to="/about">Sobre </Link>
+            <Link to="/about">Currículo </Link>
             <Link to="/projects">Projetos </Link>
             <Link to="/blog">Blog </Link>
         </div>
