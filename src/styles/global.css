@@ -52,25 +52,66 @@ nav {
   padding: 0 5%;
 }
 
+nav .links {
+  position: relative;
+  top: 5%;
+}
+
 nav .links ul {
   list-style: none;
   text-align: right;
 }
-nav .menu {
-  align-self: right;
+
+.dropbtn {
+  color: white;
+  font-size: 150%;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  float: right;
+  position: relative;
+  top: 3%;
+  right: 5%;
   display: none;
 }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #242424;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  list-style: none;
+}
+
+.dropdown-content i {
+  color: white;
+}
+
+.dropdown-content li a {
+  color: white;
+  padding: 10% 5%;
+  text-decoration: none;
+  line-height: normal;
+  text-align: center;
+  margin: 0 0;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #0f0f0f;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn i {color: rgb(87, 61, 206);}
 
 @media (max-width: 1200px) {
   nav .links ul {
     display: none;
   }
-  nav .menu {
-    display: grid;
-    position: absolute;
-    right: 5%;
-    top: 5%;
-    margin-top: 8px;
+  .dropdown {
+    display: inline-block;
   }
 }
 
@@ -83,6 +124,7 @@ nav .links ul li{
 }
 
 nav a {
+  line-height: normal;
   font-weight: 400;
   padding-bottom: 8px;
   border-bottom: 3px solid transparent;
@@ -93,10 +135,12 @@ nav a:hover {
 }
 
 nav h3 {
+  position: relative;
   vertical-align: bottom;
-  line-height: 10px;
+  line-height: normal;
   text-align: left;
   font-family: 'Roboto Mono', monospace;
+  font-size: 120%;
 }
 
 footer {  
