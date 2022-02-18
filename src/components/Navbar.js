@@ -34,6 +34,7 @@ export default function Navbar() {
                 <Link to="/projects">Projetos</Link>
                 <Link to="/blog">Blog</Link>
                 <Link to="#"><i class="fa fa-globe fa-fw"></i> pt-BR</Link>
+                <Link to="#"><i class="fa fa-sun"></i> Tema</Link>
             </div>
           </div>
         </div>
