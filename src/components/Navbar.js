@@ -1,5 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 
 export default function Navbar() {
   return (
@@ -15,28 +16,23 @@ export default function Navbar() {
             <Link to="/projects">Projetos</Link>
             <Link to="/blog">Blog</Link>
             <Link to="#"><i class="fa fa-globe fa-fw"></i> pt-BR</Link>
-            <div class="theme-switch-wrapper">
-              <i class="fa fa-sun"></i>
-              <label class="theme-switch" for="checkbox">
-                  <input type="checkbox" id="checkbox" />
-                  <div class="slider round"></div>
-              </label>
-              <i class="fa fa-moon"></i>
-            </div>
+            <ThemeToggler>
+              {({ theme, toggleTheme }) => (
+                <div class="theme-switch-wrapper">
+                  <i class="fa fa-sun"></i>
+                  <label class="theme-switch" for="checkbox">
+                    <input
+                      type="checkbox" id = "checkbox"
+                      onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+                      checked={theme === 'dark'}
+                    />{' '}
+                    <div class="slider round"></div>
+                  </label>
+                  <i class="fa fa-moon"></i>
+                </div>
+              )}
+            </ThemeToggler>
           </ul>
-          <div class="dropdown">
-            <div class="dropbtn">
-              <i class="fa fa-bars"></i>
-            </div>
-            <div class="dropdown-content">
-                <Link to="/">Início</Link>
-                <Link to="/about">Currículo</Link>
-                <Link to="/projects">Projetos</Link>
-                <Link to="/blog">Blog</Link>
-                <Link to="#"><i class="fa fa-globe fa-fw"></i> pt-BR</Link>
-                <Link to="#"><i class="fa fa-sun"></i> Tema</Link>
-            </div>
-          </div>
         </div>
     </nav>
   )

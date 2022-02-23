@@ -6,7 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: ['gatsby-plugin-dark-mode'],
   siteMetadata: {
     title: 'Breno Pelegrin',
     description: 'Projetos e portfólio de Breno Pelegrin.',

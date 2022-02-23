@@ -1,17 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
 
-:root {
-  --text-color: white;
-  --highlight-color: rgb(87, 61, 206);
-  --bg-1: rgb(51, 51, 51);
-  --bg-2: rgb(0, 0, 0);
-  --menu-bg: #242424;
-  --menu-hover: #1d1d1d;
-  --shadow: rgba(0,0,0,0.2);
-}
-
-[data-theme="light"] {
+body {
   --text-color: black;
   --highlight-color: rgb(87, 61, 206);
   --bg-1: rgb(231, 231, 231);
@@ -19,6 +9,25 @@
   --menu-bg: #e4e4e4;
   --menu-hover: #d6d6d6;
   --shadow: rgba(0, 0, 0, 0.2);
+  background: radial-gradient(at top left, var(--bg-1) 0%, var(--bg-2) 100%);
+  background-repeat: no-repeat;
+}
+
+body.dark {
+  --text-color: white;
+  --highlight-color: rgb(87, 61, 206);
+  --bg-1: rgb(51, 51, 51);
+  --bg-2: rgb(0, 0, 0);
+  --menu-bg: #242424;
+  --menu-hover: #1d1d1d;
+  --shadow: rgba(0,0,0,0.2);
+  background: radial-gradient(at top left, var(--bg-1) 0%, var(--bg-2) 100%);
+  background-repeat: no-repeat;
+}
+
+span.blue {
+  color: var(--highlight-color);
+  background: none;
 }
 
 * {
@@ -30,11 +39,6 @@
 }
 html, body {
   min-height: 100%;
-}
-
-body {
-  background: radial-gradient(at top left, var(--bg-1) 0%, var(--bg-2) 100%);
-  background-repeat: no-repeat;
 }
 
 /* textos */
@@ -94,58 +98,7 @@ nav a i {
   color: inherit;
 }
 
-.dropbtn {
-  color: var(--text-color);
-  font-size: 150%;
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown {
-  float: right;
-  position: relative;
-  top: 5%;
-  right: 5%;
-  display: none;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 1.5rem;
-  background-color: var(--menu-bg);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px var(--shadow);
-  z-index: 1;
-  list-style: none;
-}
-
-.dropdown-content i {
-  color: inherit;
-}
-
-.dropdown-content a {
-  color: var(--text-color);
-  padding: 10% 5%;
-  text-decoration: none;
-  line-height: normal;
-  text-align: center;
-  margin: 0 0;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: var(--menu-hover);}
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn a {color: var(--highlight-color);}
-
 @media (max-width: 768px) {
-  nav .links ul{
-    display: none;
-  }
-  .dropdown {
-    display: flex;
-  }
 }
 
 footer {  
@@ -155,16 +108,6 @@ footer {
     width: 100%;
     background: #212121;
     text-align: center;
-}
-
-span.pink {
-  color: #9575cd;
-  background: none;
-}
-
-span.blue {
-  color: #4fc3f7;
-  background: none;
 }
 
 .theme-switch-wrapper {
