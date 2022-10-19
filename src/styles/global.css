@@ -9,28 +9,33 @@ body {
   --menu-bg: #e4e4e4;
   --menu-hover: #d6d6d6;
   --shadow: rgba(0, 0, 0, 0.2);
+  --span-blue: rgb(87, 61, 206);
+  --card-bg: #535353;
   background: radial-gradient(at top left, var(--bg-1) 0%, var(--bg-2) 100%);
   background-repeat: no-repeat;
 }
 
 body.dark {
   --text-color: white;
-  --highlight-color: rgb(87, 61, 206);
+  --highlight-color: rgb(62, 113, 209);
   --bg-1: rgb(51, 51, 51);
   --bg-2: rgb(0, 0, 0);
   --menu-bg: #242424;
   --menu-hover: #1d1d1d;
   --shadow: rgba(0,0,0,0.2);
+  /*rgb(31, 144, 236)*/
+  --span-blue: rgb(62, 113, 209);
   background: radial-gradient(at top left, var(--bg-1) 0%, var(--bg-2) 100%);
   background-repeat: no-repeat;
 }
 
 span.blue {
-  color: var(--highlight-color);
+  color: var(--span-blue);
   background: none;
 }
 
 * {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -59,46 +64,68 @@ p {
 }
 
 .content{
-  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
 }
 
 nav {
-  padding: 0 5%;
+  margin: 2rem;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  height: 85px;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
-nav .logo {
-  margin-right: auto;
-}
-
-nav .logo h3 {
-  line-height: normal;
-  font-family: 'Roboto Mono', monospace;
-}
-
-nav .links ul{
+.links {
   display: flex;
+  list-style: none;
   flex-direction: row;
-  justify-content: space-around;
-  gap: 20px;
+  gap: 2rem;
 }
 
-nav a {
-  border-bottom: 3px solid transparent;
+.logo {
 }
 
-nav a:hover {
-  color: var(--highlight-color);
-}
-nav a i {
-  color: inherit;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
-@media (max-width: 768px) {
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 55em) {
+  .links {
+    z-index: 998;
+    padding: min(30vh, 10rem) 2rem;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    inset: 0 0 0 70%;
+    background: var(--menu-bg);
+    transform: translateX(100%);
+  }
+  .mobile-nav-toggle {
+    display: block;
+    z-index: 999;
+    width: 2rem;
+    background: red;
+    border: 0;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+  .links[data-visible="true"]{
+    transform: translateX(0%);
+  }
 }
 
 footer {  

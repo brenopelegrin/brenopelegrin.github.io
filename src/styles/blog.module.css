@@ -1,0 +1,40 @@
+.corpo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards{
+    gap: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.card{
+    display: flex;
+    max-width: 15rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: var(--bg-2);
+    align-items: center;
+    box-shadow: 7px 7px 10px var(--shadow);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.card img{
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.card button{
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    background: linear-gradient(to right, var(--bg-1), var(--bg-2));
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+}
