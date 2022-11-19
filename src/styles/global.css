@@ -13,6 +13,8 @@ body {
   --card-bg: #535353;
   background: radial-gradient(at top left, var(--bg-1) 0%, var(--bg-2) 100%);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 body.dark {
